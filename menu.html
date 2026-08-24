@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu </title>
+
+<link rel="stylesheet" href="css/menu.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<div class="login">
+
+<h1>CostPro</h1>
+
+<p>Sistema de Costos de Producción</p>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="menu-btn" id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+<span>MENÚ</span>
+
+</div>
+
+<div class="admin-user">
+
+Bienvenido Administrador
+
+<i class="fa-regular fa-circle-user"></i>
+
+</div>
+
+</nav>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar" id="sidebar">
+
+<ul>
+
+<li><a href="panel_principal.html"><i class="fa fa-home"></i>Inicio</a></li>
+
+<li><a href="insumos.html"><i class="fa fa-box"></i>Insumos</a></li>
+
+<li><a href="productos.html"><i class="fa fa-cube"></i>Productos</a></li>
+
+<li><a href="costos.html"><i class="fa fa-dollar-sign"></i>Costos</a></li>
+
+<li><a href="#"><i class="fa fa-scale-balanced"></i>Punto equilibrio</a></li>
+
+<li><a href="#"><i class="fa fa-chart-pie"></i>Análisis</a></li>
+
+<li><a href="#"><i class="fa fa-file-lines"></i>Reportes</a></li>
+
+<li><a href="configuracion.html"><i class="fa fa-gear"></i>Configuración</a></li>
+
+<li><a href="login.html"><i class="fa fa-right-from-bracket"></i>Cerrar sesión</a></li>
+
+</ul>
+
+</aside>
+<script>
+
+menuBtn.onclick=()=>{
+
+sidebar.classList.toggle(
+"active"
+);
+
+};
+
+new Chart(
+document.getElementById("ventas"),
+{
+
+type:"bar",
+
+data:{
+
+labels:[
+"Ene",
+"Feb",
+"Mar",
+"Abr",
+"May",
+"Jun"
+],
+
+datasets:[
+
+{
+label:"Ventas",
+
+data:[
+4200,
+3800,
+5000,
+4600,
+5800,
+6200
+],
+
+backgroundColor:"#1fa847"
+
+},
+
+{
+
+label:"Costos",
+
+data:[
+2700,
+2300,
+3200,
+2900,
+3500,
+3700
+],
+
+backgroundColor:"#f4a20a"
+
+}
+
+]
+
+}
+
+}
+
+);
+
+new Chart(
+document.getElementById("pie"),
+{
+
+type:"pie",
+
+data:{
+
+labels:[
+"Lavanda",
+"Avena",
+"Carbón",
+"Romero"
+],
+
+datasets:[{
+
+data:[
+30,
+25,
+20,
+25
+]
+
+}]
+
+}
+
+}
+
+);
+
+</script>
+
+</body>
+</html>
