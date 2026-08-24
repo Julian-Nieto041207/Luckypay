@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login - CostPro</title>
+
+<link rel="stylesheet" href="css/style..css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+ 
+<body>
+
+<div class="contenedor">
+
+<div class="login">
+
+<!-- ENCABEZADO -->
+
+<div class="login-top">
+
+<img src="img/logo.jpeg">
+
+<h1>CostPro</h1>
+
+<p>Sistema de Costos de Producción</p>
+
+</div>
+
+<!-- FORMULARIO -->
+
+<div class="login-body">
+
+<h2>Iniciar Sesión</h2>
+
+<form id="loginForm">
+
+<label>Correo Electrónico</label>
+
+<div class="input-box">
+
+<i class="fa-regular fa-envelope"></i>
+
+<input
+type="email"
+id="correo"
+placeholder="usuario@costpro.com">
+
+</div>
+
+<label>Contraseña</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="********">
+
+</div>
+
+<div class="opciones">
+
+<label>
+
+<input type="checkbox">
+
+Recordar
+
+</label>
+
+<a href="recuperar_contra.html">
+
+¿Olvidó su contraseña?
+
+</a>
+
+</div>
+
+<button
+type="submit"
+class="btn-login">
+
+Ingresar
+
+</button>
+
+<div class="registro">
+
+<p>
+¿No tienes cuenta?
+<a href="registro.html">
+Crear cuenta
+</a>
+</p>
+
+</div>
+
+</form>
+
+<!-- CUENTAS -->
+
+<div class="usuarios">
+
+<p><strong>Usuarios de prueba</strong></p>
+
+<p>Administrador → admin@costpro.com</p>
+
+<p>Empleado → empleado@costpro.com</p>
+
+<p><strong>Contraseñas:</strong></p>
+
+<p>Admin123</p>
+
+<p>Empleado123</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const loginForm =
+document.getElementById("loginForm");
+
+loginForm.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const correo =
+document
+.getElementById("correo")
+.value
+.trim();
+
+const password =
+document
+.getElementById("password")
+.value
+.trim();
+
+/* VALIDAR CAMPOS */
+
+if(
+correo === ""
+||
+password === ""
+){
+
+alert(
+"⚠ Debes completar todos los campos."
+);
+
+return;
+
+}
+
+/* USUARIOS (cada uno con su rol) */
+
+const usuarios = [
+
+{
+correo:"admin@costpro.com",
+password:"Admin123",
+rol:"admin"
+},
+
+{
+correo:"empleado@costpro.com",
+password:"Empleado123",
+rol:"empleado"
+}
+
+];
+
+/* BUSCAR */
+
+const usuario =
+usuarios.find(
+u =>
+u.correo === correo
+);
+
+/* CORREO INCORRECTO */
+
+if(!usuario){
+
+alert(
+"❌ El correo no existe."
+);
+
+return;
+
+}
+
+/* CONTRASEÑA */
+
+if(
+usuario.password
+!== password
+){
+
+alert(
+"❌ Contraseña incorrecta."
+);
+
+return;
+
+}
+
+/* INGRESO — redirige según el rol del usuario */
+
+alert(
+"✅ Bienvenido a CostPro"
+);
+
+if(usuario.rol === "admin"){
+  window.location.href = "panel_principal.html";
+} else {
+  window.location.href = "empleado/panel_principal.html";
+}
+
+});
+
+</script>
+
+</body>
+</html>
