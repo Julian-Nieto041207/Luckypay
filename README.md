@@ -85,30 +85,7 @@ Desarrollar e implementar un sistema de información automatizado que permita ge
 
 * Almacenamiento persistente mediante una base de datos relacional.
 * Copias de seguridad manuales.
-
----
-
-## 🖥️ Interfaz
-
-El sistema contará con una interfaz web responsiva, permitiendo su utilización desde:
-
-* 💻 Computadores
-* 📱 Dispositivos móviles
-
-La interfaz será desarrollada utilizando **HTML/CSS** y podrá utilizar frameworks como **Bootstrap** o **Tailwind CSS**.
-
----
-
-## 👥 Roles de usuario
-
-| Rol           | Permisos                                           |
-| ------------- | -------------------------------------------------- |
-| Administrador | Acceso completo al sistema                         |
-| Empleado      | Acceso a las funciones relacionadas con producción |
-
-Los permisos están definidos de manera fija y no son configurables por el usuario.
-
----
+--
 
 ## 🚫 Funcionalidades fuera del alcance
 
@@ -136,69 +113,6 @@ El sistema calcula el costo de producción teniendo en cuenta:
 **Costo de producción = Materia prima + Mano de obra directa**
 
 Los gastos fijos del negocio y otros costos indirectos no hacen parte del cálculo de esta versión.
-
----
-
-## 📁 Estructura sugerida del proyecto
-
-```text
-Sistema-Costos-Produccion/
-│
-├── README.md
-│
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   ├── js/
-│   └── img/
-│
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   └── config/
-│
-├── database/
-│   ├── database.sql
-│   └── backups/
-│
-├── docs/
-│   └── Formulacion_del_Proyecto.pdf
-│
-└── .gitignore
-```
-
----
-
-## 🚀 Instalación
-
-### 1. Clonar el repositorio
-
-```bash
-git clone URL_DEL_REPOSITORIO
-```
-
-### 2. Entrar al proyecto
-
-```bash
-cd Sistema-Costos-Produccion
-```
-
-### 3. Configurar la base de datos
-
-Importar el archivo SQL ubicado en:
-
-```text
-database/database.sql
-```
-
-### 4. Configurar el proyecto
-
-Configurar las variables necesarias para la conexión con la base de datos y los servicios utilizados por el sistema.
-
-### 5. Ejecutar el proyecto
-
-Iniciar el servidor según la tecnología utilizada en el backend y acceder desde el navegador.
 
 ---
 
