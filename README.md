@@ -1,10 +1,10 @@
 # Sistema Automatizado de Costos de Producción
 
-Sistema de información web diseñado para pequeños emprendimientos de manufactura artesanal, con el objetivo de facilitar la gestión de insumos, productos, producción, ventas y costos de fabricación.
+Sistema de información web diseñado para pequeños y medianos emprendimientos de manufactura artesanal, con el objetivo de facilitar la gestión de insumos, productos, producción, ventas y costos de fabricación.
 
 ## 📌 Descripción del proyecto
 
-El proyecto busca solucionar la falta de control sobre los costos de producción que presentan pequeños emprendimientos y negocios de manufactura.
+El proyecto busca solucionar la falta de control sobre los costos de producción que presentan pequeños y medianos emprendimientos y negocios de manufactura.
 
 Actualmente, muchos negocios registran sus compras, ventas, insumos y gastos de manera manual, lo que dificulta conocer el costo real de fabricación de sus productos y tomar decisiones adecuadas sobre los precios de venta.
 
@@ -96,7 +96,6 @@ Esta versión del proyecto **no incluye**:
 * Distribución de costos indirectos de fabricación.
 * Análisis de mercado.
 * Comparación de precios con la competencia.
-* Exportación de reportes a PDF o Excel.
 * Integración con redes sociales o marketplaces.
 * Facturación o contabilidad formal.
 * Gestión de nómina.
@@ -152,6 +151,6 @@ Ser una herramienta reconocida por ofrecer soluciones simples y eficientes que a
 
 **Sistema Automatizado de Costos de Producción para Emprendimientos**
 
-**Caso de estudio:** Michi Jabones
+**Caso de estudio:** 
 
 **Área:** Ingeniería de Sistemas
